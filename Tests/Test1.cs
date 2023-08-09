@@ -18,7 +18,6 @@ namespace MetranTest.Tests
         //}
         //Results result = Results.NoneTest;
 
-
         public TestResult Result  { get; private set; } = TestResult.None;
 
         public Test1(string id)
