@@ -17,6 +17,7 @@ namespace MetranTest.Tests
         //    NoneTest, Err1, Err2, Err3, Ok1, Ok2, Ok3, COUNT
         //}
         //Results result = Results.NoneTest;
+
         public TestResult Result  { get; private set; } = TestResult.None;
 
         public Test1(string id)
@@ -73,6 +74,7 @@ namespace MetranTest.Tests
                 case TestResult.Ok: return "Успех";
             }
         }
+
 
         //public string GetResult()
         //{
