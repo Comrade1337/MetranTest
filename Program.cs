@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MetranTest
@@ -16,7 +13,10 @@ namespace MetranTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Form1 form1 = new Form1();
+            State.InitState(form1);
+            Application.Run(form1);
         }
     }
 }

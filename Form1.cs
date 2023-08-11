@@ -15,28 +15,34 @@ namespace MetranTest
     {
         ITest myTest;
 
+        public string Status
+        {
+            get { return statusLabel.Text; }
+            set { statusLabel.Text = value; }
+        }
+
         public Form1()
         {
-            InitializeComponent();
-
-            initChoiceTestCB();
+            InitializeComponent();          
+            InitChoiceTest_cb();
         }
-        private void initChoiceTestCB()
+
+        private void InitChoiceTest_cb()
         {
             choiceTest_cb.Items.AddRange(new string[] { "Тест №1", "Тест №2", "Тест №3" });
             choiceTest_cb.SelectedIndex = 0;
         }
 
-        private void choiceTest_btn_Click(object sender, EventArgs e)
+        private async void choiceTest_btn_Click(object sender, EventArgs e)
         {
+            choiceTest_btn.Enabled = false;
+
             if (string.IsNullOrEmpty(id_tb.Text.Trim()))
             {
                 MessageBox.Show("Введите идентификатор");
                 return;
             }
-
-            
-
+          
             switch (choiceTest_cb.SelectedIndex)
             {                                                                 
                 case 0: myTest = new Test1(id_tb.Text); break;                //Тест1               
@@ -46,12 +52,16 @@ namespace MetranTest
                 default: return;
             }
 
-            myTest.Run();
+            await myTest.Run();
+
+            choiceTest_btn.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             myTest.Cancel();
         }
+
+        
     }
 }

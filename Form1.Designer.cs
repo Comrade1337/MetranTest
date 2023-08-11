@@ -43,17 +43,17 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 391);
+            this.statusStrip.Location = new System.Drawing.Point(0, 99);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(612, 22);
+            this.statusStrip.Size = new System.Drawing.Size(424, 22);
             this.statusStrip.TabIndex = 0;
             this.statusStrip.Text = "statusStrip1";
             // 
             // statusLabel
             // 
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(32, 17);
-            this.statusLabel.Text = "-----";
+            this.statusLabel.Size = new System.Drawing.Size(95, 17);
+            this.statusLabel.Text = "Ожидается ввод";
             // 
             // id_l
             // 
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 413);
+            this.ClientSize = new System.Drawing.Size(424, 121);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.choiceTest_btn);
             this.Controls.Add(this.choiceTest_cb);
@@ -120,6 +120,9 @@
             this.Controls.Add(this.id_tb);
             this.Controls.Add(this.id_l);
             this.Controls.Add(this.statusStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(440, 160);
+            this.MinimumSize = new System.Drawing.Size(440, 160);
             this.Name = "Form1";
             this.Text = "Тестовое задание";
             this.statusStrip.ResumeLayout(false);
